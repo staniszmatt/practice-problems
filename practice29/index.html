@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math Problem</title> 
+    <script type="text/javascript">
+    function domath(num1, num2, operator) { 
+    
+        switch (operator) {
+
+            case "+":
+                return num1 + num2; 
+            case "-":
+                return num1 - num2;
+            case "*":
+                return num1 * num2; 
+            case "/":
+                return num1 / num2;
+
+            default:
+                break;
+        }
+     }
+     console.log(domath(2,2,"*")); 
+
+    function changeCase (stringToChange){
+        //finish this to pull one or the other function
+    }
+    function uppercaseLetters(upper) { 
+        return upper.toUpperCase();
+     }
+     function lowercaseLetter(lower) { 
+         return lower.toLowerCase(); 
+      }
+     var changedToUpperCase = uppercaseLetters('this was all lower case!');
+     var changedToLowerCase = lowercaseLetter("THIS WAS ALL CAPS!")
+     console.log(changedToUpperCase); 
+     console.log(changedToLowerCase); 
+
+    var canary1 = trimAndRepeat("canary", 1, 3)  //"anaranaranar"
+      console.log("First String Canary: ", canary1); 
+    var canary2 = trimAndRepeat("canary", 2, 2) // "nana"
+        console.log("Second String Canary: ", canary2);
+    var superfluous = trimAndRepeat('superfluous', 4, 6) //rflrflrflrfl
+      console.log("superflous string is: ", superfluous); 
+    function trimAndRepeat(stringToCut, numberOfLetersToCutEachSide, numberToRepeatNewString) {
+        var stringToRepeat = trimBothSidesOfString(stringToCut, numberOfLetersToCutEachSide);
+        return stringToRepeat.repeat(numberToRepeatNewString); 
+    }
+
+    function trimBothSidesOfString(stringValue, numberOfLetersToCutEachSide){
+        var stringLenght = stringValue.length;
+        console.log("newStringLength is: ", stringLenght); 
+        var newString = stringValue.substring(stringLenght-numberOfLetersToCutEachSide, numberOfLetersToCutEachSide);
+        console.log("NewString Is: ",newString);
+        return newString; 
+    }
+
+
+    </script>
+    </head>
+    <body>
+
+    </body>
+</html>
