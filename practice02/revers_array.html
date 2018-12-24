@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Revers Array List</title>
+        <script type="text/javascript">
+        var myArray = ['hello', 45, 'Bob', 'what', '23'];
+        console.log("Orginal Array ",myArray);
+        
+        var reversedArray = arrayReverse(myArray);
+        console.log("Reversed Array: ",reversedArray);
+
+        function arrayReverse(arrayList){
+            var returnReversedArray = [];
+            var startArrayValue = ""; 
+            var endArrayValue = "";
+            var endArrayIndex = arrayList.length - 1 ; 
+
+            for (var arrayIndex = 0; arrayIndex < arrayList.length; arrayIndex++){
+                startArrayValue = arrayList[arrayIndex];
+                endArrayValue = arrayList[endArrayIndex-arrayIndex];
+
+                if (arrayIndex === endArrayIndex-arrayIndex) {
+                    returnReversedArray[arrayIndex] = arrayList[arrayIndex];
+                } else {
+                    returnReversedArray[endArrayIndex-arrayIndex] = startArrayValue;
+                    returnReversedArray[arrayIndex] = endArrayValue;
+                    };
+                };
+            return returnReversedArray;
+            };
+        
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
