@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>One to Mulit</title>
+    </head>
+    <script type="text/javascript">
+    var someUnsortedArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+    var sortedArray = sortArrayByType(someUnsortedArray);
+        console.log("Sorted Array: ", sortedArray);
+
+    function sortArrayByType(arrayToSort) { 
+        var arrayIndexValue = "";
+        var typeofValue = "";
+        var stringArray = [];
+        var numberArray = [];
+        var booleanArray = [];
+        var returnSortedArray = [];
+
+        for (arrayIndex = 0; arrayIndex < arrayToSort.length; arrayIndex++){
+
+            arrayIndexValue = arrayToSort[arrayIndex];
+            typeofValue = typeof(arrayIndexValue);
+            switch (typeofValue) {
+                case "string":
+                    stringArray.push(arrayIndexValue);
+                    break;
+                case "number":
+                    numberArray.push(arrayIndexValue);
+                    break;
+                case "boolean":
+                    booleanArray.push(arrayIndexValue);
+                    break;
+            
+                default:
+                    console.log("couldn't sort data: ",arrayIndexValue);
+                    break;
+            }
+        };
+        returnSortedArray.push(stringArray, numberArray, booleanArray);
+        return returnSortedArray;
+     };
+    </script>
+    <body>
+
+    </body>
+</html>
