@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math Combo</title>
+        <script type="text/javascript">
+        var randomeValue1 = Math.floor(Math.random()*10);
+            console.log("random number 1: ",randomeValue1);
+        var randomeValue2 = Math.floor(Math.random()*10);
+            console.log("random number 2: ",randomeValue2);
+        var randomeValue3 = Math.floor(Math.random()*10);
+            console.log("random number 3: ",randomeValue3);
+        var randomeValue4 = Math.floor(Math.random()*10);
+            console.log("random number 4: ",randomeValue4);
+        var randomeValue5 = Math.floor(Math.random()*10);
+            console.log("random number 5: ",randomeValue5);
+        
+        function cocococombomath(val1, val2, val3, val4, val5) { 
+            var savedCalculation = val1 * val2;
+            var returnValue = 0;  
+                    console.log(val1," x ",val2," is ", savedCalculation);
+                returnValue = savedCalculation;
+                savedCalculation = savedCalculation + val3; 
+                    console.log(returnValue," + ",val3," is ", savedCalculation);
+                returnValue = savedCalculation; 
+                savedCalculation = savedCalculation/val4;
+                console.log(returnValue," divide by ",val4," is ", savedCalculation);
+                returnValue = savedCalculation;
+                savedCalculation = savedCalculation - val5;
+                console.log(returnValue," - ",val5," is ", savedCalculation);
+                returnValue = savedCalculation;
+            return returnValue; 
+         };
+         var comboMathNumberIs = cocococombomath(randomeValue1, randomeValue2, randomeValue3, randomeValue4, randomeValue5);
+         console.log("ComboMath Function randome numbers = ",comboMathNumberIs);
+        
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
