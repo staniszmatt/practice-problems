@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Vowels</title>
+        <script type="text/javascript">
+        var vowelString = "";
+        var vowelsArray = ["a", "e", "i", "o", "u", "A", "E", "I","O","U"];
+        var alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
+                            "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", 
+                            "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", 
+                            "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", 
+                            "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        var randomArraySize = Math.floor(Math.random()*(17))+4;
+        var randomstring = createRandomeString(randomArraySize);
+            console.log("Random String is: ", randomstring);
+
+        function get_vowels(stringArray){
+            
+            var stringChar = "";
+            var returnVowelString = "";
+ 
+            for (var stringIndex =0; stringIndex < stringArray.length; stringIndex++){
+                stringChar = stringArray.slice(stringIndex,stringIndex+1);
+                returnVowelString += vowelCompare(stringChar);
+                };
+                return returnVowelString; 
+            };
+
+        vowelString = get_vowels(randomstring);
+        console.log("Vowels in string are ",vowelString);
+
+        function vowelCompare(charToCompare) { 
+            var returnVowelString = "";
+            for (var vowelIndex=0; vowelIndex < vowelsArray.length; vowelIndex++){
+                var vowelCharCompare = vowelsArray[vowelIndex];
+                if (vowelCharCompare === charToCompare){
+                    returnVowelString += charToCompare;
+                    console.log("Return string is ",returnVowelString);
+                    };
+                };
+                return returnVowelString;
+            };
+            //Creating random strings to pull vowels from. 
+        function createRandomchar() {  
+            var returnLetter = "";
+            var randomeLetterNumber = Math.floor(Math.random()*52);  
+            returnLetter = alphabetArray[randomeLetterNumber];
+            return returnLetter;
+            }
+        function createRandomeString(arraySizeValue) { 
+            var newString = ""; 
+            for (arrayIndex = 0; arrayIndex < arraySizeValue; arrayIndex++){
+                var tempCharToPush = createRandomchar();
+                newString += tempCharToPush; 
+            };
+            return newString;
+         };
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
