@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Middle Of String!</title>
+        <script type="text/javascript">
+        //code to create random stuf for practice problem
+        var alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ]
+        var randomArraySize = Math.floor(Math.random()*(20))+4;
+        var randomstring = createRandomeString(randomArraySize);
+            console.log("Random String is: ", randomstring);
+        
+        function createRandomeString(arraySizeValue) { 
+            var newString = "";
+            
+            for (arrayIndex = 0; arrayIndex < arraySizeValue; arrayIndex++){
+                var tempCharToPush = createRandomchar();
+                newString += tempCharToPush; 
+            };
+            return newString;
+         };
+
+        function createRandomchar() {  
+            var returnLetter = "";
+            var randomeLetterNumber = Math.floor(Math.random()*26);  
+            returnLetter = alphabetArray[randomeLetterNumber];
+            return returnLetter;
+        }
+
+        //Homework stuff
+        var middleStringChar = middleOfString(randomstring);
+        console.log("Middle String Char is: ",middleStringChar);
+
+        function middleOfString (stringValue){
+            var stringLength = stringValue.length
+
+            var oddEvenCheck = stringLength%2;
+            var middleStringValue = stringLength/2;
+            var oddRoundUp = Math.ceil(middleStringValue);
+            if (oddEvenCheck === 0){
+                var returnStringValue = stringValue[middleStringValue-1] + stringValue[middleStringValue];
+            } else {
+                var returnStringValue = stringValue[oddRoundUp];
+            }
+            return returnStringValue;
+        }
+        
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
