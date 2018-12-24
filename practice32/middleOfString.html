@@ -5,7 +5,7 @@
         <script type="text/javascript">
         //code to create random stuf for practice problem
         var alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ]
-        var randomArraySize = Math.floor(Math.random()*(20))+4;
+        var randomArraySize = Math.floor(Math.random()*(10))+4;
         var randomstring = createRandomeString(randomArraySize);
             console.log("Random String is: ", randomstring);
         
@@ -35,7 +35,7 @@
 
             var oddEvenCheck = stringLength%2;
             var middleStringValue = stringLength/2;
-            var oddRoundUp = Math.ceil(middleStringValue);
+            var oddRoundUp = parseInt(middleStringValue);
             if (oddEvenCheck === 0){
                 var returnStringValue = stringValue[middleStringValue-1] + stringValue[middleStringValue];
             } else {
