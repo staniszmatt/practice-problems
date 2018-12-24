@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alternate Caps</title>
+        <script type="text/javascript">
+        var alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
+                            "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", 
+                            "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", 
+                            "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", 
+                            "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        var randomArraySize = Math.floor(Math.random()*(17))+4;
+        var randomstring = createRandomeString(randomArraySize);
+            console.log("Random String is: ", randomstring);
+
+        var altCapString = alternate_capitalization(randomstring);
+        console.log("altCapString is: ",altCapString);
+        
+        function alternate_capitalization(stringToChange) { 
+            var stringchar = "";
+            var returnNewString = "";
+            var capCharIndex = 1;
+
+            for(stringIndex = 0; stringIndex < stringToChange.length; stringIndex++){
+                stringchar = stringToChange.slice(stringIndex,stringIndex+1);
+                if (capCharIndex === 0){
+                    stringchar = stringchar.toUpperCase();
+                    returnNewString += stringchar;
+                } else {
+                    stringchar = stringchar.toLowerCase();
+                    returnNewString += stringchar; 
+                    };
+                capCharIndex = 1 - capCharIndex;
+                };
+            return returnNewString;
+            };
+
+            //Creating random strings to pull vowels from. 
+        function createRandomchar() {  
+            var returnLetter = "";
+            var randomeLetterNumber = Math.floor(Math.random()*52);  
+            returnLetter = alphabetArray[randomeLetterNumber];
+            return returnLetter;
+            }
+        function createRandomeString(arraySizeValue) { 
+            var newString = ""; 
+            for (arrayIndex = 0; arrayIndex < arraySizeValue; arrayIndex++){
+                var tempCharToPush = createRandomchar();
+                newString += tempCharToPush; 
+            };
+            return newString;
+         };
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
