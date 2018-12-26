@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sort Array Alphetically</title>
+        <script type="text/javascript">
+        var myArray = ['mouse', 'cat', 'dog', 'human', "house", "car", "animal", 
+                        "bat", "batter", "cakewalk", "zoo", "zebra", "yo-yo"];
+        
+        var alphMyArray = alphabetize_array(myArray);
+        console.log(alphMyArray);
+
+        function alphabetize_array(arrayToalphabetize) { 
+            var untilDoneValue = true;
+            
+            while(untilDoneValue){
+                var untilDoneValue = false; 
+        
+                for (var arrayIndex = 0; arrayIndex < arrayToalphabetize.length-1; arrayIndex++) {
+                
+                    var arrayindexValue = arrayToalphabetize[arrayIndex];
+                    console.log("Array Value to compare through array: ", arrayindexValue);
+                    var arrayCompareValue = arrayToalphabetize[arrayIndex+1];
+                    console.log("Array compare value is: ", arrayCompareValue);
+
+                    if (arrayindexValue < arrayCompareValue === false){
+                        var swapValue = arrayToalphabetize[arrayIndex];
+                        arrayToalphabetize[arrayIndex] = arrayToalphabetize[arrayIndex+1];
+                        arrayToalphabetize[arrayIndex+1] = swapValue; 
+                        untilDoneValue = true;
+                        };
+                    };
+                };
+                return arrayToalphabetize;
+            };
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
