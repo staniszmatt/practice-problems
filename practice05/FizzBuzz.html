@@ -20,15 +20,19 @@
         };
     
         function Check3and5forStringReturn (ValueCheck) { 
-            if (ValueCheck%5 === 0){
-                return "Buzz";
+            var ç = 0;
+
+            if (ValueCheck%3 === 0 && ValueCheck%5 === 0){
+                valueToPrint = "FuzzBuzz";
             } else if (ValueCheck%3 === 0){
-                return "Fuzz";
+                valueToPrint = "Fuzz";
+            } else if (ValueCheck%5 === 0){
+                valueToPrint = "Buzz";
             } else {
                 return ValueCheck;
-            };
-         };
-
+            }
+            return valueToPrint;
+        };
         </script>
     </head>
     <body>
