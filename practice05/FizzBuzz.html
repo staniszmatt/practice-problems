@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fizz 3 Buzz 5</title>
+        <script type="text/javascript">
+        var valueToPrint = 0; 
+        var counterValue = 0; 
+        var printedValueArray = [];
+
+        printNumber1to100(); 
+
+        function printNumber1to100(){
+            for (printIndex = 0; printIndex < 100; printIndex++){
+                counterValue = printIndex + 1;
+                valueToPrint = Check3and5forStringReturn(counterValue);
+                console.log("Count Number: " + valueToPrint);
+                printedValueArray.push(valueToPrint);
+            };
+            console.log(printedValueArray);
+        };
+    
+        function Check3and5forStringReturn (ValueCheck) { 
+            if (ValueCheck%5 === 0){
+                return "Buzz";
+            } else if (ValueCheck%3 === 0){
+                return "Fuzz";
+            } else {
+                return ValueCheck;
+            };
+         };
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
