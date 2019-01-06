@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bigger Words</title>
+        <script type="text/javascript">
+
+        var myArray = ['bug', 'insect', 'mammal', 'reptile', 'mammoth', 'turtles'];
+        var testArray = ["a", "b", "c", "aa", "bb", "cc", "aaa", "bbb", "ccc", "aaaa", "bbbb", "cccc"];
+        var logNewArray = onlyLongerStrings("whale", myArray);
+        console.log("New Array: ",logNewArray);
+
+        // create a function that has two parameters, a string, and array of strings - onlyLongerStrings (stringValue, ArrayOfStrings)
+        function onlyLongerStrings(stringValue, arrayOfStrings) { 
+        // create container to store array parameter string - arrayString = ""
+        // create container to store boolean from string compare - isLonger = true
+        // create return array container - returnArrayWithLongerStrings = []
+            var arrayString = "";
+            var isLonger = true;
+            var returnArrayWithLongerStrings = [];
+        // 	for each item in array
+            for (arrayIndex = arrayOfStrings.length-1; arrayIndex >= 0; arrayIndex--){
+        // 		store array string into container - arrayString
+                arrayString = arrayOfStrings[arrayIndex];
+        // 		use the compare function to get if first param string is true or false - isLonger
+                isLonger = compareStrings(stringValue, arrayString);
+                if (isLonger === false){
+        // 		if true do nothing
+		// 		if false, add array string to the return array - returnArrayWithLongerStrings.push
+                returnArrayWithLongerStrings.push(arrayString);
+                };
+            };
+            //  When done, return the return array with larger string lengths - return returnArrayWithLongerStrings
+            return returnArrayWithLongerStrings;
+         };
+		
+        // Create second function that compares the two strings that takes in to parameters of strings - compareStrings(firstString, arrayString)
+    function compareStrings(firstString, arrayString) {
+        // 		if the first string is longer return true
+        // 		if second string is longer return false
+        if (firstString.length < arrayString.length){
+            return false;
+        };
+    };        
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
