@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fibonacci sequence</title>
+        <script type="text/javascript">
+        
+        // create function taking in the parameter for number of FS values to display
+        function setFibonacciCount(numberOfSequences) {
+
+        // create container to hold the current FS value to add and set it to 1 - currentFSValue
+	    // create container to store the new FS value and set it to 0.	- newFSValue
+        var preFSValue = 0;
+        var postFSValue = 0;
+        var addedFSValue = 1; 
+        var sequenceCount = numberOfSequences;
+        var displayArray = [];
+
+        //     while adding FS value added up to the parameter value reduce the count of the cycling sequence
+            while (sequenceCount > 0){
+
+            //     display new FS value first
+            displayArray.push(postFSValue);
+            postFSValue = addedFSValue;
+            addedFSValue = preFSValue + postFSValue;
+            preFSValue = postFSValue;
+            sequenceCount--;
+            //     Done. 
+            };
+            console.log("ArraySequence", displayArray);
+        }
+	    
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
