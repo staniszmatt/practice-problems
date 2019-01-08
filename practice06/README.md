@@ -15,8 +15,8 @@ pseudo code - Fibonacci sequence
 create function taking in the parameter for number of FS values to display
 	create container to hold the current FS value to add and set it to 1 - currentFSValue
 	create container to store the new FS value and set it to 0.	- newFSValue
-	create container to display the return function FS values - returnFSValue
-	while adding FS value added up to the parameter value
+	create container to cycle the sequence set number
+	while adding FS value added up to the parameter value reduce the count of the cycling sequence
 		display new FS value first
 		add new FS value to current FS value
 		repeat to the number of times set by parameter value
