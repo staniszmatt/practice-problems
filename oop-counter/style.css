@@ -1,0 +1,24 @@
+body {
+    margin: 0; 
+    background-color: black;
+}
+.countContainer {
+    background-color: navy;
+    height: 200px;
+    width: 400px; 
+    display: inline-flex;
+}
+
+output {
+    background-color: ghostwhite;
+    color: midnightblue;
+    height: 50px;
+    width: 50px;
+}
+
+button {
+    background-color: lime;
+    color: crimson;
+    height: 50px;
+    width: 50px;
+}
