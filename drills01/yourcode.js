@@ -7,8 +7,15 @@ function sumArray(addArrayNumbers){
     return storeAddedNumbers;
 };
 
-function fitWithinVal(){
-
+function fitWithinVal(numberList, numToAddTo){
+    let addNumber = 0;
+    let returnArray = [];
+    numberList.forEach((number) => {
+        if (addNumber + number <= numToAddTo){
+            returnArray.push(number);
+            addNumber += number;
+        }})
+    return returnArray;
 }
 
 function getAllNamesShorterThan(){
