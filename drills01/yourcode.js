@@ -18,10 +18,29 @@ function fitWithinVal(numberList, numToAddTo){
     return returnArray;
 }
 
-function getAllNamesShorterThan(){
-
+function getAllNamesShorterThan(arrayOfNames, smallerThanLength){
+    const returnNames = [];
+    arrayOfNames.forEach((name) => {
+        if (name.length < smallerThanLength){
+            returnNames.push(name);
+        }
+    })
+    return returnNames;
 }
 
-function makeLabel(){
+function makeLabel(info){
+    const {
+        greeting, 
+        givenName, 
+        familyName, 
+    } = info;
 
+    const {
+        streetNumber,
+        streetName,
+        city,
+        state,
+        zip
+    } = info["home address"];
+    return `${greeting} ${givenName} ${familyName}\n${streetNumber} ${streetName}\n${city}, ${state} ${zip}`
 }
